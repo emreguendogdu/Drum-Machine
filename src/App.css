@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
+.drum-machine {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -12,3 +8,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.display {
+  width: 60vw;
+  display: flex;
+  border: 1px solid red;
+}
+
+.drum-pad {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.drum-pad:hover {
+  transform: scale(1.1);
+  color: gold;
+};
