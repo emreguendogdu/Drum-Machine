@@ -21,6 +21,6 @@ $color: gold;
 
 .playing {
     transform: scale(1.1);
-    border-color: $color;
-    box-shadow: 0 0 1rem $color;
+    color: $color;
+    // box-shadow: 0 0 1rem $color;
 }
