@@ -10,13 +10,16 @@ export default function App() {
     if (!audio) return;
     audio.currentTime = 0; 
     audio.play();
+    document.getElementById("display").innerText = Drumpad.props.name;
   }
 
   useEffect(() => window.addEventListener('keydown', handleKeydown));
 
   return (
     <div id="drum-machine">
-      <div id="display">
+      <p id="display">
+      </p>
+      <div id="drumpad-bank">
         <Drumpad k={"Q"} audiosrc={"Heater-1.mp3"} name={"Heater 1"}/>
         <Drumpad k={"W"} audiosrc={"Heater-2.mp3"} name={"Heater 2"}/>
         <Drumpad k={"E"} audiosrc={"Heater-3.mp3"} name={"Heater 3"}/>

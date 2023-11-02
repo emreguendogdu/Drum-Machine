@@ -9,8 +9,14 @@
   color: white;
 }
 
-#display {
+#drumpad-bank {
   width: 60vw;
   display: flex;
   border: 1px solid red;
+}
+
+#display {
+  border: 3px solid red;
+  width: 60vw;
+  text-align: center;
 }
