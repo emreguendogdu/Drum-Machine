@@ -1,4 +1,4 @@
-.drum-machine {
+#drum-machine {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -9,7 +9,7 @@
   color: white;
 }
 
-.display {
+#display {
   width: 60vw;
   display: flex;
   border: 1px solid red;
