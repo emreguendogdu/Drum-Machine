@@ -1,37 +1,33 @@
+import { useEffect } from 'react';
 import './App.scss';
 import Drumpad from "./Drumpad";
 
-function App() {
+export default function App() {
 
   function handleClick (e) {
     const audio = document.getElementById(e.target.innerText);
-    console.log(audio);
+    if (!audio) return;
     audio.currentTime = 0; // reset the current time
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-    playPromise.then(_ => {
-    })
-    .catch(error => {
-      console.log(error);
-    });
+    audio.play();
+     const playingDiv = document.querySelector(".drum-pad[data-key=" + e.target.innerText + "]");
+    playingDiv.classList.add("playing");
   }
-  };
   
-  function handleKey (e) {
+  function handleKeydown (e) {
     const key = e.key.toUpperCase(); 
     const audio = document.getElementById(key);
-    if (!audio) return; 
+    if (!audio) return;
     audio.currentTime = 0; 
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-    playPromise.then(_ => {
-    })
-    .catch(error => {
-    });
+    audio.play();
   }
+  function removeTransition(e) {
+    if (e.propertyName !== "transform") return // skip if it's not a transform
+      this.classList.remove('playing');
   }
+  const drumpads = document.querySelectorAll('.drum-pad');
+  drumpads.forEach(drumpad => drumpad.addEventListener('transitionend', removeTransition))
 
-  window.addEventListener('keydown', handleKey);
+  useEffect(() => window.addEventListener('keydown', handleKeydown));
 
   return (
     <div id="drum-machine">
@@ -49,5 +45,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

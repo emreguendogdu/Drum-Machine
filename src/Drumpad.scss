@@ -1,10 +1,26 @@
+$color: gold;
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
 .drum-pad {
     display: flex;
+    flex-direction: column;
     flex: 1;
     cursor: pointer;
     transition: 0.2s;
 }
 .drum-pad:hover {
+    color: $color;
+}
+.text {
+    display: flex;
+    font-size: 1rem;
+}
+
+.playing {
     transform: scale(1.1);
-    color: gold;
+    border-color: $color;
+    box-shadow: 0 0 1rem $color;
 }
