@@ -10,7 +10,9 @@ export default function App() {
     if (!audio) return;
     audio.currentTime = 0; 
     audio.play();
-    document.getElementById("display").innerText = Drumpad.props.name;
+    const playingDiv = document.querySelector(".drum-pad[data-key=" + key + "]");
+     playingDiv.classList.add("playing");
+    document.getElementById("display").innerText = audio.getAttribute("data-name");
   }
 
   useEffect(() => window.addEventListener('keydown', handleKeydown));
