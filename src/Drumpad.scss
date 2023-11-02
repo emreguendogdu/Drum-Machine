@@ -1,0 +1,10 @@
+.drum-pad {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.drum-pad:hover {
+    transform: scale(1.1);
+    color: gold;
+}
