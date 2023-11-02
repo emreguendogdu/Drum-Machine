@@ -1,0 +1,22 @@
+#drum-machine {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+#display {
+  width: 60vw;
+  display: flex;
+  border: 1px solid red;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: var(--color);
+  box-shadow: 0 0 1rem var(--color);
+}
