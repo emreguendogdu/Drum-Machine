@@ -1,4 +1,5 @@
 import React from 'react'
+import './Drumpad.scss'
 
 export default function Drumpad(props) {
   return (

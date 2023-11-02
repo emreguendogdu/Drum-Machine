@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Drumpad from "./Drumpad";
 
 function App() {
