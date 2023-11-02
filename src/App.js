@@ -11,9 +11,19 @@ export default function App() {
     audio.currentTime = 0; 
     audio.play();
     const playingDiv = document.querySelector(".drum-pad[data-key=" + key + "]");
-     playingDiv.classList.add("playing");
+    playingDiv.classList.add("playing");
     document.getElementById("display").innerText = audio.getAttribute("data-name");
   }
+
+  function removeTransition(e) {
+    if (e.propertyName !== 'transform') return; 
+    this.classList.remove('playing');  
+  }
+  useEffect(() => {
+    const drumpads = document.querySelectorAll('.drum-pad');
+    drumpads.forEach(drumpad => drumpad.addEventListener('transitionend', removeTransition));
+  });
+
 
   useEffect(() => window.addEventListener('keydown', handleKeydown));
 

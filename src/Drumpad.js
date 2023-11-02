@@ -4,7 +4,6 @@ import { handleClick } from './handleClick';
 
 export default function Drumpad(props) {
   return (
-      <>
       <div className='container'>
     <div className='drum-pad' 
     onClick={handleClick}
@@ -17,8 +16,6 @@ export default function Drumpad(props) {
         data-name={props.name}>
         </audio>
         </div>
-        <div><p className='text'>{props.name}</p></div>
-            </div>
-        </>
+        </div>
   )
 }
