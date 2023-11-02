@@ -1,12 +1,13 @@
 import React from 'react'
 import './Drumpad.scss'
+import { handleClick } from './handleClick';
 
 export default function Drumpad(props) {
   return (
       <>
       <div className='container'>
     <div className='drum-pad' 
-    onClick={props.handleClick}
+    onClick={handleClick}
     id={props.name.replace(/\W/gi, '')}
     data-key={props.k}>
         {props.k}
