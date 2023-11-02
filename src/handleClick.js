@@ -5,4 +5,7 @@ export function handleClick (e) {
   audio.play();
   const playingDiv = document.querySelector(".drum-pad[data-key=" + e.target.innerText + "]");
   playingDiv.classList.add("playing");
+  setTimeout(() => {
+    playingDiv.classList.remove("playing");
+  }, 200); 
 }
