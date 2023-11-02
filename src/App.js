@@ -11,12 +11,6 @@ export default function App() {
     audio.currentTime = 0; 
     audio.play();
   }
-  function removeTransition(e) {
-    if (e.propertyName !== "transform") return // skip if it's not a transform
-      this.classList.remove('playing');
-  }
-  const drumpads = document.querySelectorAll('.drum-pad');
-  drumpads.forEach(drumpad => drumpad.addEventListener('transitionend', removeTransition))
 
   useEffect(() => window.addEventListener('keydown', handleKeydown));
 

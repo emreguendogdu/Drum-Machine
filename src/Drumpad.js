@@ -8,7 +8,7 @@ export default function Drumpad(props) {
       <div className='container'>
     <div className='drum-pad' 
     onClick={handleClick}
-    id={props.name.replace(/\W/gi, '')}
+    id={props.name.replace(/\W/gi, '').toLowerCase()}
     data-key={props.k}>
         {props.k}
         <audio src={"https://s3.amazonaws.com/freecodecamp/drums/" + props.audiosrc} className='clip' 
