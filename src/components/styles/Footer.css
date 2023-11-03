@@ -1,6 +1,48 @@
-footer {
-
+:root {
+    --main-color: lightgray;
+    --webkit-user-select: none;
+    user-select: none;
 }
-footer-left {
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
     
+}
+.footer-left p {
+    margin: 0;
+    padding: 0;
+}
+.footer-left, .footer-right {
+    margin: 10px auto;
+    color: var(--main-color);
+    font-size: .9rem;
+}
+.footer-left p:hover {
+    cursor: not-allowed;
+}
+.footer-right a:hover {
+    cursor: pointer;
+}
+.link {
+    text-decoration: none;
+    color: var(--main-color);
+    margin: 0 10px;
+}
+.link:hover {
+    font-weight: bold;
+}
+.link.linkedin:hover {
+    color: #0E76A8;
+}
+.link.github:hover {
+    color: #6e5494;
+}
+.link:active {
+    background-color: #000;
+    color: #89A7F5 !important;
 }
