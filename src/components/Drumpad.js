@@ -1,5 +1,5 @@
 import React from 'react'
-import './Drumpad.scss'
+import './styles/Drumpad.scss'
 import { handleClick } from './handleClick';
 
 export default function Drumpad(props) {

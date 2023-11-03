@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import './App.scss';
+import './styles/App.scss';
 import Drumpad from "./Drumpad";
 
 export default function App() {
