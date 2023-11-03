@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './styles/App.scss';
 import Drumpad from "./Drumpad";
+import Footer from "./Footer";
 
 export default function App() {
 
@@ -25,6 +26,7 @@ export default function App() {
   useEffect(() => window.addEventListener('keydown', handleKeydown));
 
   return (
+    <>
     <div id="drum-machine">
       <p id="display">
       </p>
@@ -40,5 +42,7 @@ export default function App() {
         <Drumpad k={"C"} audiosrc={"Cev_H2.mp3"} name={"Closed Hi-hat"}/>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
