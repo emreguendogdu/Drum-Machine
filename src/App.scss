@@ -1,5 +1,11 @@
-#drum-machine {
+html {
   background-color: #282c34;
+}
+
+#drum-machine {
+  background-image: url("./concert-background.jpg");
+  background-size: cover;
+  background-position: bottom;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,14 +13,18 @@
   justify-content: center;
   font-size: 2rem;
   color: white;
-}
-
-#drumpad-bank {
-  width: 60vw;
-  display: flex;
-}
-
-#display {
-  width: 60vw;
-  text-align: center;
+  #drumpad-bank {
+      width: 60vw;
+      display: flex;
+    }
+  
+    #display {
+      width: 60vw;
+      text-align: center;
+      padding: 10px;
+      margin: 0 5px 0 5px;
+      text-align: center;
+      text-shadow: 3px 3px black;
+      transition: 0.1s;
+    }
 }
